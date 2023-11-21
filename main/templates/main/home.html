@@ -1,0 +1,187 @@
+{% extends "main/base.html" %}
+{% load static %}
+<!-- title -->
+{% block title %}SIM Shop{% endblock %}
+<!-- Navigation bar -->
+{% block navbar %}
+<li><a href="/">About</a></li>
+<li><a href="/home" class="active">Home</a></li>
+<li><a href="/shop">Shop</a></li>
+<li id="shop-bag">
+  <a href="/cart"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+</li>
+{% endblock %}
+<!-- start contnet -->
+{% block content %}
+<section id="hero">
+  <h4>New category Products!</h4>
+  <h2>Super value deals</h2>
+  <h1>On All Products</h1>
+  <p>up to 50% off on selected products</p>
+  <button></button>
+</section>
+<section id="category" class="body-section">
+  <div class="iconBox">
+    <img src="{% static 'feature1.JPG' %}" alt="">
+    <h6>Jackets</h6>
+  </div>
+  <div class="iconBox">
+    <img src="{% static 'feature2.JPG' %}" alt="">
+    <h6>Tops</h6>
+  </div>
+  <div class="iconBox">
+    <img src="{% static 'feature4.JPG' %}" alt="">
+    <h6>Bottoms</h6>
+  </div>
+  <div class="iconBox">
+    <img src="{% static 'feature5.JPG' %}" alt="">
+    <h6>Shoes</h6>
+  </div>
+  <div class="iconBox">
+    <img src="{% static 'feature3.JPG' %}" alt="">
+    <h6>Accessories</h6>
+  </div>
+  <div class="iconBox">
+    <img src="{% static 'feature6.JPG' %}" alt="">
+    <h6>Head Gear</h6>
+  </div>
+</section>
+
+<section id="NormalProductDisplay" class="body-section">
+  <h2>Top Product</h2>
+  <p>With many different colours!</p>
+  <div class="displayContainer">
+    {% for productimg in normalrange %}
+    <div class="productCard">
+      <img src="{% static productimg %}" alt="">
+      <div class="description">
+        <span>Tops</span>
+        <h5>KIZEK Tops 1543</h5>
+        <div class="star">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <h4>$178</h4>
+      </div>
+        <a href="/individual_product"
+          ><i class="fa fa-shopping-cart cart" aria-hidden="true"></i
+        ></a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="promotionBanner" class="body-section">
+  <div class="bannerBox">
+    <h4>Crazy deals</h4>
+    <h2>buy 1 get 1 free</h2>
+    <span>The best classic Sportswear is on sale at KIZEK</span>
+    <button type="button" class="outline">Learn More</button>
+  </div>
+  <div class="bannerBox bannerBox2">
+    <h4>New Launch</h4>
+    <h2>Up to 70% offer</h2>
+    <span>The best classic Sports bra is on sale at KIZEK</span>
+    <button type="button" class="outline">Learn More</button>
+  </div>
+</section>
+<section id="promotionBanner2">
+  <div class="bannerBox">
+    <h2>SEASONAL SALE</h2>
+    <h3>Summer Collection -50% off</h3>
+  </div>
+  <div class="bannerBox bannerBox2">
+    <h2>NEW ACCESSORIES COLLECTION</h2>
+    <h3>Winter Collection -50% off</h3>
+  </div>
+  <div class="bannerBox bannerBox3">
+    <h2>SEASONAL SALE</h2>
+    <h3>Winter Collection -50% off</h3>
+  </div>
+</section>
+
+<section class="body-section sliderProductDisplay" id="sliderProduct">
+  <h2>New Arrivals</h2>
+  <p>New Year Collection Modern Design</p>
+  <div class="sliderContainer">
+    <div class="sliderWrapper">
+      <button type="button" id="prev-slide" class="sliderButtons left-button">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <ul class="image-list">
+        <a href="#">
+          <div class="productCard">
+            <img src="{% static 'top11.JPG' %}" alt="">
+            <div class="description">
+              <span>Tops</span>
+        <h5>KIZEK Tops 1543</h5>
+              <div class="star">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
+              <h4>$178</h4>
+            </div>
+          </div>
+        </a>
+        {% for slidercard in sliderrange %}
+        <a href="#incomplete" class="slider-link">
+          <div class="productCard">
+            <img src="{% static slidercard %}"
+            alt="">
+            <div class="description">
+              <span>Product Category</span>
+              <h5>Product Name</h5>
+              <div class="star">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <h4>$188</h4>
+            </div>
+          </div>
+        </a>
+        {%endfor%}
+      </ul>
+      <button type="button" id="next-slide" class="sliderButtons right-button">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="incomplete" class="overlay">
+  <div class="popup">
+      <div class="content">
+            <h2 class="header" data-text="Oops!">
+               Oops!
+            </h2>
+            <br>
+            <br>
+            <h4>
+               incomplete Portion!
+            </h4>
+            <p>
+               Sorry, the product page you're looking for doesn't exist. This is because the Hackathon only require us to make a page for only a single product. If you would like view how the product details page look like, click the button below, or choose the product name "KIZEK Tops 1543".
+            </p>
+            <div class="btns">
+               <a href="/individual_product">View Product</a>
+               <a href="#sliderProduct">Return to Carousel</a>
+            </div>
+         </div>
+  </div>
+</div>
+
+{% endblock %}

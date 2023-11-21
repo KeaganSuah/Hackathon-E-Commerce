@@ -1,0 +1,197 @@
+{% extends "main/base.html" %} {% load static %}
+<!-- title -->
+{% block title %}SIM Shop{% endblock %}
+<!-- Navigation bar -->
+{% block navbar %}
+<li><a href="/" class="active">About</a></li>
+<li><a href="/home">Home</a></li>
+<li><a href="/shop">Shop</a></li>
+<li id="shop-bag">
+  <a href="/cart"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+</li>
+{% endblock %}
+<!-- start contnet -->
+{% block content %}
+<section id="hero-about">
+  <h2>
+    HACKATHON<br />
+    2023
+  </h2>
+  <h3>SIM UOL CS</h3>
+  <h3>First Place Winners!</h3>
+</section>
+
+<section>
+  <div class="aboutContainer mainContainer">
+    <div class="aboutContainer topContainer">
+      <img class="mainImg" src="{% static 'mission.PNG' %}" />
+      <div class="allText aboveText">
+        <p class="text-blk headingText">Our Mission</p>
+        <p class="text-blk subHeadingText">
+          To create a E-Commerce Website selling female sports wear.
+        </p>
+        <p class="text-blk description">
+          Concentrate on developing the front-end, client-side of the E-commerce
+          website. Each team has eight hours to code their website and four
+          minutes to show it to the judges.
+        </p>
+        <div class="explore">
+          <a href="/home">
+            <button type="button">Explore</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="aboutContainer topContainer bottomContainer">
+      <img class="mainImg" src="{% static 'firstplace.JPG' %}" />
+      <div class="allText bottomText">
+        <p class="text-blk headingText">Our Vision</p>
+        <p class="text-blk subHeadingText">
+          Create a functionable and user-friendly E-commerce site across all
+          platforms!
+        </p>
+        <p class="text-blk description">
+          We used a variety of various aspects to make our website stand out
+          from the crowd. Examples include a carousel slider, an add to and
+          remove from cart option, and responsive design for tablet and mobile.
+        </p>
+        <div class="explore">
+          <a href="/home">
+            <button type="button">Explore</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="winners">
+  <div class="winnersBox">
+    <div class="winnersImg">
+      <img src="{% static 'keagan.jpg' %}" alt="" />
+    </div>
+    <div class="winnersDetails">
+      <h4>Group Leader</h4>
+      <p>
+        Keagan is the engine that propels the team's success during the
+        hackathon. Keagan coordinates the team's operations by offering
+        guidance, encouraging collaboration, and guaranteeing good
+        communication. Throughout the fast-paced hackathon environment, he plays
+        a critical role in work coordination, decision-making facilitation, and
+        keeping a good and focused team dynamic. He was also in charge of
+        assuring the website's functionality, which is the key aim.
+      </p>
+      <a href="#kscert">Click to view Certificate</a>
+    </div>
+    <h1>KEAGAN SUAH</h1>
+  </div>
+  <div class="winnersBox">
+    <div class="winnersImg">
+      <img src="{% static 'zen.JPG' %}" alt="" />
+    </div>
+    <div class="winnersDetails">
+      <h4>Accessibility Specialist</h4>
+      <p>
+        Zeng Ye makes certain that the hackathon project is inclusive and
+        accessible to all users. Zeng ye work together with the Designer and
+        Frontend Developers to embed accessibility features into the online
+        application by quickly conducting accessibility evaluations and
+        developing solutions. Zeng Ye is critical in the hackathon scenario for
+        prioritising and executing accessibility criteria within the project's
+        limited deadline.
+      </p>
+      <a href="#zycert">Click to view Certificate</a>
+    </div>
+    <h1>SHENG ZENGYE</h1>
+  </div>
+  <div class="winnersBox">
+    <div class="winnersImg">
+      <img src="{% static 'ian.jpg' %}" alt="" />
+    </div>
+    <div class="winnersDetails">
+      <h4>Designer</h4>
+      <p>
+        Ian takes on the task of designing a visually appealing and
+        user-friendly interface for the web application. In the hackathon
+        setting, he quickly ideastrate and produces wireframes and high-fidelity
+        mockups, interacting directly with frontend developers to quickly
+        implement design concepts. Ian's inventiveness and quick decision-making
+        contribute to the overall aesthetics and user experience within the
+        hackathon's short period.
+      </p>
+      <a href="#iancert">Click to view Certificate</a>
+    </div>
+    <h1>KOH IANJIE</h1>
+  </div>
+  <div class="winnersBox">
+    <div class="winnersImg">
+      <img src="{% static 'ernest.jpg' %}" alt="" />
+    </div>
+    <div class="winnersDetails">
+      <h4>Copywriter</h4>
+      <p>
+        Ernest is responsible for producing simple and captivating written copy
+        that effectively explains the hackathon project's message and
+        functionality. In a fast-paced setting, Ernest creates striking copy for
+        various web application components, partnering with the Designer to
+        effectively incorporate text into the design. Their ability to
+        communicate vital information concisely leads to a unified and
+        compelling user experience.
+      </p>
+      <a href="#ercert">Click to view Certificate</a>
+    </div>
+    <h1>CHUA ERNEST</h1>
+  </div>
+  <div class="winnersBox">
+    <div class="winnersImg">
+      <img src="{% static 'kurt.jpg' %}" alt="" />
+    </div>
+    <div class="winnersDetails">
+      <h4>Reseacher</h4>
+      <p>
+        Kurt's involvement is critical for locating tools, libraries, and assets
+        that will help the hackathon project go faster. Individuals in this
+        profession locate and curate web resources such as code snippets,
+        frameworks, or design assets that improve the team's productivity within
+        the fast-paced hackathon timeframe. He contributes by remaining current
+        on industry trends and best practises in order to bring valuable
+        insights to the project.
+      </p>
+      <a href="#kucert">Click to view Certificate</a>
+    </div>
+    <h1>KURT CASTILLO</h1>
+  </div>
+</section>
+
+<div id="kscert" class="overlay">
+  <div class="popup">
+    <a class="close" href="#winners">&times;</a>
+    <img src="{% static 'Keagan.png' %}" alt="" />
+  </div>
+</div>
+<div id="zycert" class="overlay">
+  <div class="popup">
+    <a class="close" href="#winners">&times;</a>
+    <img src="{% static 'Zengye.png' %}" alt="" />
+  </div>
+</div>
+<div id="kucert" class="overlay">
+  <div class="popup">
+    <a class="close" href="#winners">&times;</a>
+    <img src="{% static 'Kurt.png' %}" alt="" />
+  </div>
+</div>
+<div id="iancert" class="overlay">
+  <div class="popup">
+    <a class="close" href="#winners">&times;</a>
+    <img src="{% static 'Ian.png' %}" alt="" />
+  </div>
+</div>
+<div id="ercert" class="overlay">
+  <div class="popup">
+    <a class="close" href="#winners">&times;</a>
+    <img src="{% static 'Ernest.png' %}" alt="" />
+  </div>
+</div>
+
+{% endblock %}

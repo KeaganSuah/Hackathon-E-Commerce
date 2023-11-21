@@ -1,0 +1,83 @@
+{% extends "main/base.html" %} {% load static %}
+<!-- title -->
+{% block title %}SIM Shop{% endblock %}
+<!-- Navigation bar -->
+{% block navbar %}
+<li><a href="/">About</a></li>
+<li><a href="/home">Home</a></li>
+<li><a href="/shop">Shop</a></li>
+<li id="shop-bag">
+  <a href="/cart" class="active"
+    ><i class="fa fa-shopping-basket" aria-hidden="true"></i
+  ></a>
+</li>
+{% endblock %}
+<!-- start contnet -->
+{% block content %}
+<section id="hero-indi">
+  <h2>#GirlPower</h2>
+  <p>Free Delivery for 1st time purchase!</p>
+</section>
+<section id="cart" class="body-section">
+  <table width="100%">
+    <thead>
+      <tr>
+        <td>Remove</td>
+        <td>Image</td>
+        <td>Product</td>
+        <td>Colour</td>
+        <td>Size</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>SubTotal</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {%for name, values in shopping_cart.items%}
+        <td>
+          <form method="post" action="{% url 'individual_product' %}">
+            {% csrf_token %}
+            <button type="submit" value="{{name}}" name="remove">
+              <i class="fa fa-times-circle removeProduct"></i>
+            </button>
+          </form>
+        </td>
+        <td><img src="{% static 'top11.JPG' %}" /></td>
+        <td>KIZEK Tops 1543</td>
+        <td>{{values.1|default:''|upper}}</td>
+        <td>{{values.2|default:''|upper}}</td>
+        <td>${{values.3}}</td>
+        <td><input type="number" value="{{values.0}}" /></td>
+        <td>${{values.4}}</td>
+        {%endfor%}
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="cart-add" class="body-section">
+  <div id="discount">
+    <h3>Apply Discount Code</h3>
+    <input type="text" placeholder="Enter Your Code" />
+    <button type="button">Apply</button>
+  </div>
+  <div id="subtotal">
+    <h3>Cart Total</h3>
+    <table>
+      <tr>
+        <td>Cart Subtotal</td>
+        <td>$ {{total}}</td>
+      </tr>
+      <tr>
+        <td>Shipping</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>$ {{total}}</strong></td>
+      </tr>
+    </table>
+    <button type="button">Proceed to Checkout</button>
+  </div>
+</section>
+{% endblock %}

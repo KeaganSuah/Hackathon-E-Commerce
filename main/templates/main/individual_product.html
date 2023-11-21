@@ -1,0 +1,152 @@
+{% extends "main/base.html" %} {% load static %}
+<!-- title -->
+{% block title %}SIM Shop{% endblock %}
+<!-- Navigation bar -->
+{% block navbar %}
+<li><a href="/">About</a></li>
+<li><a href="/home">Home</a></li>
+<li><a href="/shop" class="active">Shop</a></li>
+<li id="shop-bag">
+  <a href="/cart"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+</li>
+{% endblock %}
+<!-- start contnet -->
+{% block content %}
+<section id="hero-shop">
+  <h2>#GetActive</h2>
+  <p>Up to 70% off on Sportswear!</p>
+</section>
+<section id="pro_details" class="body-section">
+  <div class="single-pro-image">
+    <img src="{% static 'top11.JPG' %}" alt="" id="main-img" />
+    <div class="small-img-group">
+      <div class="small-img-col">
+        <img
+          src="{% static 'top12.JPG' %}"
+          width="100%"
+          alt=""
+          class="small-img"
+        />
+      </div>
+      <div class="small-img-col">
+        <img
+          src="{% static 'top13.JPG' %}"
+          width="100%"
+          alt=""
+          class="small-img"
+        />
+      </div>
+      <div class="small-img-col">
+        <img
+          src="{% static 'top14.JPG' %}"
+          width="100%"
+          alt=""
+          class="small-img"
+        />
+      </div>
+      <div class="small-img-col">
+        <img
+          src="{% static 'top15.JPG' %}"
+          width="100%"
+          alt=""
+          class="small-img"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="single-pro-details">
+    <h6>Home / Tops</h6>
+    <h4>KIZEK Tops 1543</h4>
+    <h2>$139.00</h2>
+    <form method="post" action="{% url 'individual_product' %}">
+      {% csrf_token %}
+      <select name="size" id="size">
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select name="colour" id="colour">
+        <option>White</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>Yellow</option>
+        <option>Pink</option>
+      </select>
+      <input type="number" value="1" name="amount" id="amount" />
+      <button type="submit">Add to Cart</button>
+    </form>
+    <h4>Product Details</h4>
+    <span
+      >Where comfort comes first: MODERN SEAMLESS underwear designs are cut from
+      ultra-smooth, breathable fabrics with a second skin fit.
+      <br />
+      <br />• Lyocell stretch blend <br />• Removable pad <br />• Racerback
+      style <br />• Pull-on design <br />• Calvin Klein signature rib-knit
+      underband <br />• Our model is 1.76m (5ft 9in) and is wearing a size S.
+      <br />• 84% lyocell 14% polyamide 2% elastane <br />• Machine wash <br />•
+      Do not tumble dry <br />• Fits true to size
+    </span>
+  </div>
+</section>
+<section class="body-section sliderProductDisplay" id="sliderProduct">
+  <h2>Related Products</h2>
+  <p>New Year Collection Modern Design</p>
+  <div class="sliderContainer">
+    <div class="sliderWrapper">
+      <button type="button" id="prev-slide" class="sliderButtons left-button">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <ul class="image-list">
+        {% for slidercard in sliderrange %}
+        <a href="#incomplete" class="slider-link">
+          <div class="productCard">
+            <img src="{% static slidercard %}" alt="" />
+            <div class="description">
+              <span>Product Category</span>
+              <h5>Product Name</h5>
+              <div class="star">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+              </div>
+              <h4>$188</h4>
+            </div>
+          </div>
+        </a>
+        {%endfor%}
+      </ul>
+      <button type="button" id="next-slide" class="sliderButtons right-button">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="incomplete" class="overlay">
+  <div class="popup">
+    <div class="content">
+      <h2 class="header" data-text="Oops!">Oops!</h2>
+      <br />
+      <br />
+      <h4>incomplete Portion!</h4>
+      <p>
+        Sorry, the product page you're looking for doesn't exist. This is
+        because the Hackathon only require us to make a page for only a single
+        product. If you would like view how the product details page look like,
+        click the button below, or choose the product name "KIZEK Tops 1543".
+      </p>
+      <div class="btns">
+        <a href="#sliderProduct">Return to Carousel</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

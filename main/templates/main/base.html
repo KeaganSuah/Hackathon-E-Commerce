@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Home{% endblock %}</title>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="icon" sizes="512x512" href="{% static 'logo.JPG' %}" />
+</head>
+<body>
+  <form method="POST">
+<section id="navigation">
+    <img src="{% static 'logo.JPG' %}" alt="">
+  <div>
+    <ul id="navbar">
+      {% block navbar %}{% endblock %}
+      <a href="#" id="close"><i class="fa fa-times"></i></a>
+    </ul>
+  </div>
+  <div id="mobile">
+    <a href="/cart"
+      ><i class="fa fa-shopping-basket" aria-hidden="true"></i
+    ></a>
+    <i id="bar" class="fa fa-bars"></i>
+  </div>
+</section>
+<div class="fade-in-up">{% block content %} {% endblock %}</div>
+<section id="email" class="body-section">
+  <div class="newstext">
+    <h4>Sign Up for Newsletters</h4>
+    <p>
+      Get E-mail updates about our latest products and
+      <span>get notify when new stocks arrive!</span>
+    </p>
+  </div>
+  <div class="form">
+    <input type="text" placeholder="Your Email Address" />
+    <button type="button">Sign Up</button>
+  </div>
+</section>
+
+<footer class="body-section">
+<div class="col">
+    <img src="{% static 'logo2.JPG' %}" alt="" id="logo">
+  <h4>Contact</h4>
+  <p><strong>Address: </strong> 461 Clementi Road, Singapore 599491</p>
+  <p><strong>Phone: </strong> +65 9680 1822 </p>
+  <p><strong>Hours: </strong> 9:00 - 5:30 Hrs</p>
+  <div class="follow">
+    <h4>follow us</h4>
+    <div class="icon">
+      <i class="fa fa-facebook-official"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-youtube"></i>
+    </div>
+  </div>
+</div>
+<div class="col install">
+  <h4>Secured Payment Gateways</h4>
+  <img src="{% static 'payments.png' %}" alt="" style="width: 300px;">
+</div>
+<div class="copyright">
+  <p>©KIZEK - HACKATHON2023 - SIM_UOLCS</p>
+</div>
+</footer>
+<script src="{% static 'script.js' %}"></script>
+</form>
+</body>
+</html>
