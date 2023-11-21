@@ -2,7 +2,7 @@
 
 Congratulations Team KIZEK on Winning First Place in the SIM-UOL-CS Hackathon!
 
-![FemFit Wear](path-to-your-logo-or-image.png)
+![FemFit Wear](main/static/Keagan.png)
 
 ## Overview
 KIZEK Wear is a frontend-only e-commerce website dedicated to female sportswear. This project was developed as part of the Hackathon Team "KIZEK", where our team secured the first-place position by creating an innovative and visually stunning user interface for a female sportswear marketplace.
