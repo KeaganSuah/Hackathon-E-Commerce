@@ -13,11 +13,11 @@ KIZEK Wear is a frontend-only e-commerce website dedicated to female sportswear.
 - **Functionality:** Functions that allow users to add items to cart, remove from cart, viewing differenct colours on product.
 
 ## Team Members
-- [Keagan Suah - Group Leader]
-- [Sheng Zengye - Accessibility Specialist]
-- [Koh IanJie - Designer]
-- [Chua Ernest - Copywriter]
-- [Kurt Castillo - Reacher]
+- Keagan Suah - Group Leader
+- Sheng Zengye - Accessibility Specialist
+- Koh IanJie - Designer
+- Chua Ernest - Copywriter
+- Kurt Castillo - Reacher
 
 ## Achievements
 - **First Place:** Awarded the first-place position in the SIM-UOL-CS Hackathon.
@@ -53,6 +53,6 @@ Feel free to reach out for any inquiries or collaborations!
 
 suahkeagan@gmail.com
 
-Thank you for your support!
+Thank you all for your support!
 
 ---
