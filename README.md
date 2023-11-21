@@ -1,9 +1,7 @@
 # Project Name: E-Commerce Website - UOL-CS Hackathon Winner 🏆
 
 Congratulations Team KIZEK on Winning First Place in the SIM-UOL-CS Hackathon!
-
-![FemFit Wear](main/static/Keagan.png)
-
+![Kizek](main/static/firstplace.JPG)
 ## Overview
 KIZEK Wear is a frontend-only e-commerce website dedicated to female sportswear. This project was developed as part of the Hackathon Team "KIZEK", where our team secured the first-place position by creating an innovative and visually stunning user interface for a female sportswear marketplace.
 
@@ -26,12 +24,19 @@ KIZEK Wear is a frontend-only e-commerce website dedicated to female sportswear.
 - **Innovative Design:** Recognized for our innovative and visually appealing frontend design for the FemFit Wear e-commerce website.
 - **Functionality and Completeness:** Recognized for our fully functional website that excellently fulfil it's intended purpose
 
+## Certificates of Appreciations
+![FemFit Wear](main/static/Keagan.png)
+![FemFit Wear](main/static/Zengye.png)
+![FemFit Wear](main/static/Ian.png)
+![FemFit Wear](main/static/Ernest.png)
+![FemFit Wear](main/static/Kurt.png)
+
 ## Getting Started
 To explore the project, simply follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
 2. Pip install Django
-3. Open the `website` file in your terminal.
+3. Open the `hackathon_uol_2023` file in your terminal.
 4. Run the `manage.py` file by typing `python manage.py runserver`
 
 ## Technologies Used
