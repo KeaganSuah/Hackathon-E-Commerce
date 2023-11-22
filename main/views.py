@@ -7,10 +7,11 @@ def about(response):
 	return render(response, "main/about.html", {})
 
 
-sliderrange = []
-normalrange = []
-allrange = []
-for i in range(1, 19):
+def home(response):
+ sliderrange = []
+ normalrange = []
+ allrange = []
+ for i in range(1, 19):
     if i <= 4:
         normalrange.append("top1"+str(i)+".JPG")
         sliderrange.append("product"+str(i)+".JPG")
@@ -20,20 +21,42 @@ for i in range(1, 19):
         allrange.append("product"+str(i)+".JPG")
     else:
         allrange.append("product"+str(i)+".JPG")
-
-def home(response):
-	return render(response, "main/home.html", {"sliderrange":sliderrange, "normalrange":normalrange})
+ return render(response, "main/home.html", {"sliderrange":sliderrange, "normalrange":normalrange})
 
 
 def shop(response):
-	return render(response, "main/shop.html", {"allrange":allrange})
+ sliderrange = []
+ normalrange = []
+ allrange = []
+ for i in range(1, 19):
+    if i <= 4:
+        normalrange.append("top1"+str(i)+".JPG")
+        sliderrange.append("product"+str(i)+".JPG")
+        allrange.append("product"+str(i)+".JPG")
+    elif i <= 9:
+        sliderrange.append("product"+str(i)+".JPG")
+        allrange.append("product"+str(i)+".JPG")
+    else:
+        allrange.append("product"+str(i)+".JPG")
+ return render(response, "main/shop.html", {"allrange":allrange})
 
 
 shopping_cart = {}
 
 def individual_product(request):
-    print(shopping_cart)
-
+    sliderrange = []
+    normalrange = []
+    allrange = []
+    for i in range(1, 19):
+        if i <= 4:
+            normalrange.append("top1"+str(i)+".JPG")
+            sliderrange.append("product"+str(i)+".JPG")
+            allrange.append("product"+str(i)+".JPG")
+        elif i <= 9:
+            sliderrange.append("product"+str(i)+".JPG")
+            allrange.append("product"+str(i)+".JPG")
+        else:
+            allrange.append("product"+str(i)+".JPG")
     if request.method == 'POST':
         amount = request.POST.get('amount', '').lower()
         color = request.POST.get('colour', '').lower()
@@ -55,3 +78,17 @@ def cart(request):
     return render(request, "main/cart.html", {"shopping_cart": shopping_cart, "total":total, })
 
 
+def load_picture():
+    sliderrange = []
+    normalrange = []
+    allrange = []
+    for i in range(1, 19):
+        if i <= 4:
+            normalrange.append("top1"+str(i)+".JPG")
+            sliderrange.append("product"+str(i)+".JPG")
+            allrange.append("product"+str(i)+".JPG")
+        elif i <= 9:
+            sliderrange.append("product"+str(i)+".JPG")
+            allrange.append("product"+str(i)+".JPG")
+        else:
+            allrange.append("product"+str(i)+".JPG")
