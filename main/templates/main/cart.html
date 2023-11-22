@@ -45,11 +45,11 @@
         </td>
         <td><img src="{% static 'top11.JPG' %}" /></td>
         <td>KIZEK Tops 1543</td>
-        <td>{{values.1|default:''|upper}}</td>
-        <td>{{values.2|default:''|upper}}</td>
-        <td>${{values.3}}</td>
-        <td><input type="number" value="{{values.0}}" /></td>
-        <td>${{values.4}}</td>
+        <td>{{values.color|default:''|upper}}</td>
+        <td>{{values.size|default:''|upper}}</td>
+        <td>${{values.unit_price}}</td>
+        <td><input type="number" value="{{values.amount}}" /></td>
+        <td>${{values.total_price}}</td>
         {%endfor%}
       </tr>
     </tbody>
