@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponse
+from decimal import Decimal
 
 # Create your views here.
 sliderrange = ['product1.jpg', 'product2.jpg', 'product3.jpg', 'product4.jpg', 'product5.jpg', 'product6.jpg', 'product7.jpg', 'product8.jpg', 'product9.jpg']
@@ -18,29 +19,42 @@ def home(response):
 def shop(response):
     return render(response, "main/shop.html", {"allrange":allrange})
 
-
 shopping_cart = {}
 
 def individual_product(request):
     if request.method == 'POST':
-        amount = request.POST.get('amount', '').lower()
+        product_key = 'KIZEK Tops 1543'.lower()
+        amount = int(request.POST.get('amount', 0))
         color = request.POST.get('colour', '').lower()
         size = request.POST.get('size', '').lower()
-        shopping_cart['KIZEK Tops 1543'.lower()] = [amount, color, size, 139, int(amount)*139]
+
+        # Ensure data integrity in the shopping cart
+        item_key = f"{product_key}_{color}_{size}"
+        shopping_cart[item_key] = {
+            'amount': amount,
+            'color': color,
+            'size': size,
+            'unit_price': Decimal('139.00'),
+            'total_price': Decimal(amount) * Decimal('139.00'),
+        }
+
+        return redirect('individual_product')  # Redirect to the same page after form submission
 
     return render(request, "main/individual_product.html", {"sliderrange": sliderrange})
 
 
 def cart(request):
-    total = 0
-    for items, values in shopping_cart.items():
-        total += (int(values[0])*int(values[3])) 
+    print(shopping_cart)
+    total = Decimal(0)
     if request.method == 'POST':
-        remove = request.POST.get('remove', '').lower()
-        print(remove)
-        shopping_cart.pop(remove)
-        return redirect('/cart')
-    return render(request, "main/cart.html", {"shopping_cart": shopping_cart, "total":total, })
+        remove_key = request.POST.get('remove', '').lower()
+        if remove_key in shopping_cart:
+            shopping_cart.pop(remove_key)
+
+    for item_key, item_data in shopping_cart.items():
+        total += item_data['total_price']
+
+    return render(request, "main/cart.html", {"shopping_cart": shopping_cart, "total": total})
 
 
 # for i in range(1, 19):
