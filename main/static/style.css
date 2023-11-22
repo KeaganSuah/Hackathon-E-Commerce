@@ -1174,18 +1174,11 @@ button.outline:hover {
   }
 }
 
+
 @media screen and (max-width: 766px) {
-  #mobile {
-    display: flex;
-    align-items: center;
-  }
 
-  #mobile i {
-    padding-right: 5px;
-  }
-
-  #header {
-    padding: 10px 30px;
+  #navigation {
+    padding: 5px 10px;
   }
 
   #hero {
