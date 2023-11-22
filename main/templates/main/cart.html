@@ -33,8 +33,8 @@
       </tr>
     </thead>
     <tbody>
+      {%for name, values in shopping_cart.items%}
       <tr>
-        {%for name, values in shopping_cart.items%}
         <td>
           <form method="post" action="{% url 'individual_product' %}">
             {% csrf_token %}
@@ -43,15 +43,15 @@
             </button>
           </form>
         </td>
-        <td><img src="{% static 'top11.JPG' %}" /></td>
+        <td><img src="{% static 'top11.jpg' %}" /></td>
         <td>KIZEK Tops 1543</td>
         <td>{{values.color|default:''|upper}}</td>
         <td>{{values.size|default:''|upper}}</td>
         <td>${{values.unit_price}}</td>
         <td><input type="number" value="{{values.amount}}" /></td>
         <td>${{values.total_price}}</td>
-        {%endfor%}
       </tr>
+      {%endfor%}
     </tbody>
   </table>
 </section>
