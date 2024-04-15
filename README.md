@@ -24,13 +24,6 @@ KIZEK Wear is a frontend-only e-commerce website dedicated to female sportswear.
 - **Innovative Design:** Recognized for our innovative and visually appealing frontend design for the FemFit Wear e-commerce website.
 - **Functionality and Completeness:** Recognized for our fully functional website that excellently fulfil it's intended purpose
 
-## Certificates of Appreciations
-![FemFit Wear](main/static/Keagan.png)
-![FemFit Wear](main/static/Zengye.png)
-![FemFit Wear](main/static/Ian.png)
-![FemFit Wear](main/static/Ernest.png)
-![FemFit Wear](main/static/Kurt.png)
-
 ## Getting Started
 To explore the project, simply follow these steps:
 
@@ -45,6 +38,14 @@ To explore the project, simply follow these steps:
 - JavaScript
 - Python
 - Django Framework
+
+## Certificates of Appreciations
+![FemFit Wear](main/static/Keagan.png)
+![FemFit Wear](main/static/Zengye.png)
+![FemFit Wear](main/static/Ian.png)
+![FemFit Wear](main/static/Ernest.png)
+![FemFit Wear](main/static/Kurt.png)
+
 
 ## Acknowledgments
 We would like to express our gratitude to SIM-UOL-CSSC for providing this exciting opportunity and recognition.
