@@ -1,4 +1,4 @@
-# Hackathon Project Name: E-Commerce Website - UOL-CS Hackathon Winner 🏆
+# Hackathon 2023 Project Name: E-Commerce Website - UOL-CS Hackathon Winner 🏆
 
 Congratulations Team KIZEK on Winning First Place in the SIM-UOL-CS Hackathon!
 ![Kizek](main/static/firstplace.JPG)
