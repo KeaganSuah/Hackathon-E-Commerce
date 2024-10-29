@@ -33,8 +33,7 @@ To explore the project, simply follow these steps:
 4. Run the `manage.py` file by typing `python manage.py runserver`
 
 ## Technologies Used
-- HTML
-- CSS
+- HTML/CSS
 - JavaScript
 - Python
 - Django Framework
