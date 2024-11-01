@@ -44,8 +44,6 @@ To explore the project, simply follow these steps:
 - Frontend Development
 - UI/UX Design
 - Team Collaboration
-- Problem Solving and Debugging
-- Agile Project Management
 
 ## Certificates of Appreciations
 ![FemFit Wear](main/static/Keagan.png)
