@@ -32,19 +32,20 @@ To explore the project, simply follow these steps:
 3. Open the `hackathon_uol_2023` file in your terminal.
 4. Run the `manage.py` file by typing `python manage.py runserver`
 
-## Technologies and Skills Used
+## Technologies
 - HTML/CSS
 - JavaScript
 - Python
 - Django Framework
+- GitHub (Version Control)
+
+## Skills
 - Responsive Web Design
 - Frontend Development
 - UI/UX Design
 - Team Collaboration
-- GitHub (Version Control)
 - Problem Solving and Debugging
 - Agile Project Management
-
 
 ## Certificates of Appreciations
 ![FemFit Wear](main/static/Keagan.png)
